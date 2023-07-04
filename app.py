@@ -35,7 +35,6 @@ def load_results():
 
 def load_data():
   BTC_ticker=yf.Ticker("BTC-USD")
-  BTC_info=BTC_ticker.info
   BT_data=BTC_ticker.history(period="1wk")
   df=pd.DataFrame({"Close":BT_data["Close"]})
   return df[1:] #Gives 7 Days Not Including Today, so drop the first row
