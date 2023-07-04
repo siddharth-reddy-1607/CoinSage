@@ -33,7 +33,6 @@ def load_results():
     results.rename(columns={"Unnamed: 0":"Model"},inplace=True)
     return results
 
-@st.cache_data
 def load_data():
   BTC_ticker=yf.Ticker("BTC-USD")
   BTC_info=BTC_ticker.info
